@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1095568305023",
+    "project_id": "mypets-78fa7",
+    "storage_bucket": "mypets-78fa7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1095568305023:android:113c6a3c289ad8d790484a",
+        "android_client_info": {
+          "package_name": "mirea.it.mypets"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1095568305023-dfkj1dj523bg7r59si04gdsg5er6ejha.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACqTifK6c7OjpLj8OPNSyjSQQL8jS40dI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1095568305023-dfkj1dj523bg7r59si04gdsg5er6ejha.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

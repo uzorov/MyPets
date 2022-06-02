@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MyPets</string>
+    <string name="signIn">Войти</string>
+    <string name="SignUp">Зарегистрировать питомца</string>
+    <string name="Abilities">Зарегистрируйте питомца</string>
+    <string name="Abilities_1">Читайте статьи о правильном уходе за Вашим животным</string>
+    <string name="Abilities_2">Храните фотографии Вашего питомца в одном месте в облачном хранилище</string>
+</resources>
