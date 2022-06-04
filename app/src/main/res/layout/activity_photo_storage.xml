@@ -13,7 +13,7 @@
             android:id="@+id/_toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="@color/general_blue"
             app:popupTheme="@style/Theme.Design.Light.NoActionBar"/>
     </com.google.android.material.appbar.AppBarLayout>
     <LinearLayout

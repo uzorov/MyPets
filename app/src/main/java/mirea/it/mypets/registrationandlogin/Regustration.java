@@ -27,6 +27,7 @@ import java.util.Map;
 
 import mirea.it.mypets.Pet;
 import mirea.it.mypets.R;
+import mirea.it.mypets.usefull.PreferenceClass;
 
 /**
  * Метод, позволяюший зарегистрироваться пользователю в системе
@@ -38,6 +39,8 @@ import mirea.it.mypets.R;
  * имени животного и пароля по id только что созданного пользователя
  */
 public class Regustration extends AppCompatActivity {
+
+    PreferenceClass preferenceClass;
 
     FirebaseUser currentUser;
     private DatabaseReference mDatabase;
@@ -178,7 +181,10 @@ public class Regustration extends AppCompatActivity {
     private void wrtiteToDataBase(String name, String typeOfPet) {
         currentUser = mAuth.getCurrentUser();
 
-        getSharedPreferences("countofimages", 0).edit().putInt("count", 0).apply();
+        preferenceClass = new PreferenceClass(this);
+
+        preferenceClass.setCount(1, currentUser.getUid());
+
 
         Pet pet = new Pet(name, typeOfPet);
         mDatabase.child("pets").child(currentUser.getUid()).setValue(pet);

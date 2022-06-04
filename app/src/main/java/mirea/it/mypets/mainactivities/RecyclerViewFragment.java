@@ -32,6 +32,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.squareup.picasso.Picasso;
 
 import java.io.ByteArrayOutputStream;
 
@@ -90,7 +91,7 @@ public class RecyclerViewFragment extends Fragment {
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
 
-        countofimages = preferenceClass.getCount();
+        countofimages = preferenceClass.getCount(currentUser.getUid());
 
 
         initDataset();
@@ -119,7 +120,7 @@ public class RecyclerViewFragment extends Fragment {
                     setDirectoryName("images").
                     save(bitmap);
 
-            preferenceClass.setCount(countofimages+1);
+
             Log.d("count", "OnActivityResult_countofimages: " + Integer.toString(countofimages));
 
 
@@ -138,6 +139,8 @@ public class RecyclerViewFragment extends Fragment {
                     Intent intent2 = new Intent(getContext(), photoStorage.class);
                     startActivity(intent2);
 
+                    preferenceClass.setCount(countofimages+1, currentUser.getUid());
+
                     Log.d("Photo", "Фото сохранено");
                 }
             });
@@ -150,7 +153,7 @@ public class RecyclerViewFragment extends Fragment {
 
     private String getUniceName() {
         String name = "pet";
-        countofimages = preferenceClass.getCount();
+        countofimages = preferenceClass.getCount(currentUser.getUid());
 
         Log.d("count", "GetUniceName_countofimages: " + Integer.toString(countofimages));
         name += Integer.toString(countofimages);
@@ -181,7 +184,7 @@ public class RecyclerViewFragment extends Fragment {
 
 
         for (int i = 1; i < countofimages; i++) {
-            String photoName = "pet" + Integer.toString(i );
+            String photoName = "pet" + Integer.toString(i);
             Bitmap bitmap = new ImageSaver(getContext()).
                     setFileName(photoName).
                     setDirectoryName("images").
@@ -241,6 +244,11 @@ public class RecyclerViewFragment extends Fragment {
         public void onBindViewHolder(ViewHolder viewHolder, final int position) {
             Log.d(TAG, "Element " + position + " set.");
 
+            if (position == 0)
+            {
+                viewHolder.getButton().setMaxWidth(1);
+                viewHolder.getButton().setMaxHeight(1);
+            }
             viewHolder.getButton().setImageDrawable(mDataSet[position]);
         }
 

@@ -10,5 +10,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="general_purple">#EE82EE</color>
     <color name="general_blue">#2088DF</color>
+    <color name="red_warning">#FF4E40</color>
 
 </resources>

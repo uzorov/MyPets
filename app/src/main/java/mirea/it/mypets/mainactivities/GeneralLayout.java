@@ -5,39 +5,71 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.Toast;
+import android.widget.ImageView;
+import android.widget.TextView;
 
-import java.util.Locale;
+import com.google.firebase.auth.FirebaseAuth;
 
 import mirea.it.mypets.R;
-import mirea.it.mypets.registrationandlogin.Regustration;
-import mirea.it.mypets.registrationandlogin.helloPage;
+import mirea.it.mypets.registrationandlogin.MainActivity;
 
 public class GeneralLayout extends AppCompatActivity {
 
-    private ImageButton galleryButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_general_layout);
 
-        galleryButton = (ImageButton) findViewById(R.id.gallery);
+        ImageButton galleryButton = (ImageButton) findViewById(R.id.gallery);
+        ImageButton advicesButton = (ImageButton) findViewById(R.id.advices);
+        ImageView accountButton = (ImageView) findViewById(R.id.account);
+        TextView signOut = (TextView) findViewById(R.id.signOut);
+
 
         galleryButton.setOnClickListener(new View.OnClickListener() {
-                                       /**
-                                        * @param view - параметр, позволяющий получить id кнопки, которая была нажата
-                                        *                  Метод вызывается при нажатии на кнопку: "Зарегистрировать питомца"
-                                        *
-                                        */
-                                       @Override
-                                       public void onClick(View view) {
-                                           Intent intent = new Intent(GeneralLayout.this, photoStorage.class);
-                                           startActivity(intent);
-                                       }
-                                   }
+                                             /**
+                                              * @param view - параметр, позволяющий получить id кнопки, которая была нажата
+                                              *                  Метод вызывается при нажатии на кнопку: "Зарегистрировать питомца"
+                                              *
+                                              */
+                                             @Override
+                                             public void onClick(View view) {
+                                                 Intent intent = new Intent(GeneralLayout.this, photoStorage.class);
+                                                 startActivity(intent);
+                                             }
+                                         }
         );
+
+
+
+
+        advicesButton.setOnClickListener(new View.OnClickListener() {
+
+                                             @Override
+                                             public void onClick(View view) {
+                                                 Intent intent = new Intent(GeneralLayout.this, advicesPage.class);
+                                                 startActivity(intent);
+                                             }
+                                         }
+        );
+
+        accountButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(GeneralLayout.this, petAccountPage.class);
+                startActivity(intent);
+            }
+        });
+
+        signOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent(GeneralLayout.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

@@ -128,7 +128,7 @@ public class helloPage extends AppCompatActivity {
     }
 
     private void downloadAndSavePhotos() {
-        for (int i = 0; i < countofimages; i++) {
+        for (int i = 1; i <= countofimages; i++) {
             String photoName = "pet" + Integer.toString(i);
             int position = i;
             storageRef.child(photoName).getBytes(Long.MAX_VALUE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
@@ -171,7 +171,7 @@ public class helloPage extends AppCompatActivity {
 
     public int updateCountOfImages() {
 
-       countofimages = preferenceClass.getCount();
+       countofimages = preferenceClass.getCount(currentUser.getUid());
 
         Log.d("count", "HelloPage_countofimages: " + Integer.toString(countofimages));
 

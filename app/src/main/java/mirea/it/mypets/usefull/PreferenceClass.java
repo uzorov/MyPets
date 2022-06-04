@@ -11,19 +11,19 @@ public class PreferenceClass {
         sharedpreferences = context.getSharedPreferences(PREFERENCE_NAME, Context.MODE_PRIVATE);
     }
 
-    public int getCount() {
-        return sharedpreferences.getInt("count", 0);
+    public int getCount(String userID) {
+        return sharedpreferences.getInt(userID, 0);
     }
 
-    public void setCount(int count) {
+    public void setCount(int count, String userId) {
         SharedPreferences.Editor editor = sharedpreferences.edit();
-        editor.putInt("count", count);
+        editor.putInt(userId, count);
         editor.apply();
     }
 
-    public void clearCount() {
+    public void clearCount(String userID) {
         SharedPreferences.Editor editor = sharedpreferences.edit();
-        editor.remove("count");
+        editor.remove(userID);
         editor.apply();
     }
 }

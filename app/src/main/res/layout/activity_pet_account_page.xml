@@ -6,4 +6,82 @@
     android:layout_height="match_parent"
     tools:context=".mainactivities.petAccountPage">
 
+    <View
+        android:id="@+id/view2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/rectangle_new"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/accountPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/petSetAccountPageName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/laptev_font"
+            android:gravity="center_horizontal"
+            android:text="Имя"
+            android:textColor="@color/general_blue"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/petSetAccountPageType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/laptev_font"
+            android:gravity="center_horizontal"
+            android:text="Тип"
+            android:textColor="@color/general_blue"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/petSetAccountPageNumberOdCloudPhotos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/laptev_font"
+            android:gravity="center_horizontal"
+            android:text="Количество фотографий в базе"
+            android:textColor="@color/general_blue"
+            android:textSize="25sp" />
+
+
+    </LinearLayout>
+
+    <TextView
+        app:layout_goneMarginBottom="5dp"
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/laptev_font"
+        android:gravity="center"
+        android:text="@string/author"
+        android:textColor="@color/general_blue"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/view2"
+        app:layout_constraintStart_toEndOf="@+id/view2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
