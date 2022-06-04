@@ -178,6 +178,8 @@ public class Regustration extends AppCompatActivity {
     private void wrtiteToDataBase(String name, String typeOfPet) {
         currentUser = mAuth.getCurrentUser();
 
+        getSharedPreferences("countofimages", 0).edit().putInt("count", 0).apply();
+
         Pet pet = new Pet(name, typeOfPet);
         mDatabase.child("pets").child(currentUser.getUid()).setValue(pet);
     }
