@@ -1,6 +1,7 @@
 package mirea.it.mypets.registrationandlogin;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
 
@@ -8,14 +9,17 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.util.Log;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -50,6 +54,7 @@ import mirea.it.mypets.usefull.PreferenceClass;
  */
 public class helloPage extends AppCompatActivity {
 
+    private String AdminID = "rcJKCoJwyCYeibOLc9k1zVMJdAx1";
     FirebaseStorage storage;
     StorageReference storageRef;
     private int countofimages;
@@ -78,6 +83,8 @@ public class helloPage extends AppCompatActivity {
         preferenceClass = new PreferenceClass(helloPage.this);
 
         currentUser = mAuth.getCurrentUser();
+
+
         mDatabase = FirebaseDatabase.getInstance().getReference();
         String petID = currentUser.getUid();
         storage = FirebaseStorage.getInstance();
@@ -86,26 +93,66 @@ public class helloPage extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<DataSnapshot> task) {
                 if (!task.isSuccessful()) {
+
+                    helloPet = (TextView) findViewById(R.id.helloPet);
+                    helloPet.setText("Привет, \n".concat("Питомец"));
+                    Toast.makeText(helloPage.this, "Авторизация не удалась, пожалуйста, проверьте подключение к интернету...", Toast.LENGTH_SHORT).show();
                     Log.e("firebase", "Error getting data", task.getException());
+
+                    Thread thread = new Thread() {
+                        @Override
+                        public void run() {
+                            try {
+                                TimeUnit.SECONDS.sleep(2);
+                                Intent intent2 = new Intent(helloPage.this, MainActivity.class);
+                                startActivity(intent2);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    };
+
+                    thread.start();
                 }
                 else {
                     pet = task.getResult().getValue(Pet.class);
                     if (pet != null) {
                         helloPet = (TextView) findViewById(R.id.helloPet);
                         helloPet.setText("Привет, \n".concat(pet.name));
+                        stop();
                     }
-                    else
+                    else if (currentUser.getUid().equals(AdminID))
                     {
+                        View view = (View) findViewById(R.id.view2);
                         helloPet = (TextView) findViewById(R.id.helloPet);
-                        helloPet.setText("Привет, \n".concat("Питомец"));
+                        TextView author = (TextView) findViewById(R.id.author);
+                        helloPet.setTextColor(Color.BLACK);
+                        author.setTextColor(Color.BLACK);
+                        view.setVisibility(View.INVISIBLE);
+                        helloPet.setText("Привет, \n".concat(AdminID));
+                        helloPet.setTextSize(30);
+
+                        Thread thread = new Thread() {
+                            @Override
+                            public void run() {
+                                try {
+                                    TimeUnit.SECONDS.sleep(3);
+                                    Intent intent2 = new Intent(helloPage.this, AdminActivity.class);
+                                    startActivity(intent2);
+                                } catch (InterruptedException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        };
+                        thread.start();
                     }
-                    updateCountOfImages();
-                    downloadAndSavePhotos();
-                    stop();
+
                 }
             }
 
             private void stop() {
+                updateCountOfImages();
+                downloadAndSavePhotos();
                 Thread thread = new Thread() {
                     @Override
                     public void run() {
@@ -170,7 +217,6 @@ public class helloPage extends AppCompatActivity {
 
 
     public int updateCountOfImages() {
-
        countofimages = preferenceClass.getCount(currentUser.getUid());
 
         Log.d("count", "HelloPage_countofimages: " + Integer.toString(countofimages));

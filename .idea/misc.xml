@@ -7,6 +7,8 @@
         <entry key="..\:/Users/uzoro/AndroidStudioProjects/MyPets/app/src/main/res/drawable-xxhdpi/ic_launcher_background.xml" value="0.141" />
         <entry key="..\:/Users/uzoro/AndroidStudioProjects/MyPets/app/src/main/res/drawable-xxhdpi/ic_launcher_foreground.xml" value="0.141" />
         <entry key="..\:/Users/uzoro/AndroidStudioProjects/MyPets/app/src/main/res/drawable-xxhdpi/rectangle.xml" value="0.141" />
+        <entry key="..\:/Users/uzoro/AndroidStudioProjects/MyPets/app/src/main/res/drawable-xxhdpi/rectangle_new_2.xml" value="0.141" />
+        <entry key="..\:/Users/uzoro/AndroidStudioProjects/MyPets/app/src/main/res/drawable-xxhdpi/rectangle_new_3.xml" value="0.141" />
         <entry key="..\:/Users/uzoro/AndroidStudioProjects/MyPets/app/src/main/res/drawable-xxhdpi/triangle.xml" value="0.141" />
         <entry key="..\:/Users/uzoro/AndroidStudioProjects/MyPets/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1465" />
         <entry key="..\:/Users/uzoro/AndroidStudioProjects/MyPets/app/src/main/res/drawable/rectangle.xml" value="0.1465" />
@@ -17,15 +19,16 @@
         <entry key="..\:/Users/uzoro/AndroidStudioProjects/MyPets/app/src/main/res/font/boncegro.xml" value="0.209375" />
         <entry key="..\:/Users/uzoro/AndroidStudioProjects/MyPets/app/src/main/res/font/boncegro_font.xml" value="0.20572916666666666" />
         <entry key="..\:/Users/uzoro/AndroidStudioProjects/MyPets/app/src/main/res/font/laptev_font.xml" value="0.154296875" />
+        <entry key="..\:/Users/uzoro/AndroidStudioProjects/MyPets/app/src/main/res/layout/activity_admin.xml" value="0.2" />
         <entry key="..\:/Users/uzoro/AndroidStudioProjects/MyPets/app/src/main/res/layout/activity_advices_page.xml" value="0.1" />
-        <entry key="..\:/Users/uzoro/AndroidStudioProjects/MyPets/app/src/main/res/layout/activity_general_layout.xml" value="0.2" />
-        <entry key="..\:/Users/uzoro/AndroidStudioProjects/MyPets/app/src/main/res/layout/activity_hello_page.xml" value="0.264" />
-        <entry key="..\:/Users/uzoro/AndroidStudioProjects/MyPets/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/uzoro/AndroidStudioProjects/MyPets/app/src/main/res/layout/activity_general_layout.xml" value="0.264" />
+        <entry key="..\:/Users/uzoro/AndroidStudioProjects/MyPets/app/src/main/res/layout/activity_hello_page.xml" value="0.2" />
+        <entry key="..\:/Users/uzoro/AndroidStudioProjects/MyPets/app/src/main/res/layout/activity_main.xml" value="0.176" />
         <entry key="..\:/Users/uzoro/AndroidStudioProjects/MyPets/app/src/main/res/layout/activity_papers_page.xml" value="0.1765625" />
-        <entry key="..\:/Users/uzoro/AndroidStudioProjects/MyPets/app/src/main/res/layout/activity_pet_account_page.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/uzoro/AndroidStudioProjects/MyPets/app/src/main/res/layout/activity_pet_account_page.xml" value="0.2" />
         <entry key="..\:/Users/uzoro/AndroidStudioProjects/MyPets/app/src/main/res/layout/activity_photo_storage.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/uzoro/AndroidStudioProjects/MyPets/app/src/main/res/layout/activity_regustration.xml" value="0.2" />
-        <entry key="..\:/Users/uzoro/AndroidStudioProjects/MyPets/app/src/main/res/layout/list_item.xml" value="0.1" />
+        <entry key="..\:/Users/uzoro/AndroidStudioProjects/MyPets/app/src/main/res/layout/activity_regustration.xml" value="0.1" />
+        <entry key="..\:/Users/uzoro/AndroidStudioProjects/MyPets/app/src/main/res/layout/list_item.xml" value="0.176" />
         <entry key="..\:/Users/uzoro/AndroidStudioProjects/MyPets/app/src/main/res/layout/recycle_view_frag.xml" value="0.18984375" />
         <entry key="..\:/Users/uzoro/AndroidStudioProjects/MyPets/app/src/main/res/layout/text_row_item.xml" value="0.253125" />
         <entry key="..\:/Users/uzoro/AndroidStudioProjects/MyPets/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1465" />

@@ -102,13 +102,6 @@ class advicesPage : AppCompatActivity() {
     }
 }
 
-class Feed(
-    val items: ArrayList<FeedItems>
-)
+class Feed(val items: ArrayList<FeedItems>)
 
-class FeedItems(
-    val title: String,
-    val link: String,
-    val thumbnail: String,
-    val description: String
-)
+class FeedItems(val title: String, val link: String, val thumbnail: String, val description: String)

@@ -99,7 +99,6 @@ public class RecyclerViewFragment extends Fragment {
         mAdapter = new CustomAdapter(mDataset);
 
 
-
     }
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -139,7 +138,7 @@ public class RecyclerViewFragment extends Fragment {
                     Intent intent2 = new Intent(getContext(), photoStorage.class);
                     startActivity(intent2);
 
-                    preferenceClass.setCount(countofimages+1, currentUser.getUid());
+                    preferenceClass.setCount(countofimages + 1, currentUser.getUid());
 
                     Log.d("Photo", "Фото сохранено");
                 }
@@ -147,7 +146,6 @@ public class RecyclerViewFragment extends Fragment {
 
 
         }
-
 
     }
 
@@ -179,7 +177,7 @@ public class RecyclerViewFragment extends Fragment {
     private void initDataset() {
 
         Log.d("count", "InitDatasetAgain:" + Integer.toString(countofimages));
-        mDataset = new Drawable[countofimages+1];
+        mDataset = new Drawable[countofimages + 1];
         mDataset[0] = getResources().getDrawable(R.drawable.plus);
 
 
@@ -194,8 +192,6 @@ public class RecyclerViewFragment extends Fragment {
 
             mDataset[i] = d;
         }
-
-
     }
 
 
@@ -244,8 +240,7 @@ public class RecyclerViewFragment extends Fragment {
         public void onBindViewHolder(ViewHolder viewHolder, final int position) {
             Log.d(TAG, "Element " + position + " set.");
 
-            if (position == 0)
-            {
+            if (position == 0) {
                 viewHolder.getButton().setMaxWidth(1);
                 viewHolder.getButton().setMaxHeight(1);
             }

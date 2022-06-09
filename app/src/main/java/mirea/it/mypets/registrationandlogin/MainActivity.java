@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     FirebaseAuth mAuth;
     private EditText mPetName;
     private EditText mPassword;
+    private ImageView imageView;
     private Map<Character, String> dictionary;
 
     @Override
@@ -35,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         findViewById(R.id.signInButton).setOnClickListener(this);
         findViewById(R.id.signUpButton).setOnClickListener(this);
+        findViewById(R.id.imageViewAdministrator).setOnClickListener(this);
 
         mPetName = (EditText) findViewById(R.id.petName);
         mPassword = (EditText) findViewById(R.id.Password);
@@ -113,6 +116,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         } else if (view.getId() == R.id.signUpButton) {
             Intent intent = new Intent(MainActivity.this, Regustration.class);
+            startActivity(intent);
+        }
+        else if (view.getId() == R.id.imageViewAdministrator)
+        {
+            Intent intent = new Intent(MainActivity.this, AdminActivity.class);
             startActivity(intent);
         }
     }

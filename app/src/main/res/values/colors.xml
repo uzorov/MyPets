@@ -11,5 +11,7 @@
     <color name="general_purple">#EE82EE</color>
     <color name="general_blue">#2088DF</color>
     <color name="red_warning">#FF4E40</color>
+    <color name="lessWhite">#D2D1D3</color>
+
 
 </resources>

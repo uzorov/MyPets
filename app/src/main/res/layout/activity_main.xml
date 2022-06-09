@@ -90,7 +90,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageViewAdministrator"
         android:layout_width="265dp"
         android:layout_height="190dp"
         app:layout_constraintEnd_toEndOf="parent"
