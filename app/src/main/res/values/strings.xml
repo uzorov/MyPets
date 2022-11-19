@@ -1,11 +1,14 @@
 <resources>
     <string name="app_name">MyPets</string>
     <string name="signIn">Войти</string>
-    <string name="SignUp">Зарегистрировать питомца</string>
-    <string name="Abilities">Зарегистрируйте питомца</string>
-    <string name="Abilities_1">Читайте статьи о правильном уходе за Вашим животным</string>
-    <string name="Abilities_2">Храните фотографии Вашего питомца в одном месте в облачном хранилище</string>
+    <string name="SignUp">Зарегистрироваться</string>
+    <string name="Abilities">Зарегистрироваться</string>
+    <string name="Abilities_1">Оформляйте заявки на опеку над животными прямо в приложении</string>
+    <string name="Abilities_2">Просматривайте оформленные заявки и получайте персональные материалы об уходе за животным</string>
     <string name="fsdfdsfsf">FSDFDSFSF</string>
-    <string name="author">Версия 0.1 Кирилл Узоров 2022</string>
+    <string name="author">Версия 0.2.1 Кирилл Узоров 2022</string>
     <string name="signOut">Выйти из аккаунта</string>
+    <string name="enter_the_password">Введите пароль</string>
+    <string name="did_you_stil_havent_an_account">У Ваc ещё нет аккаунта?</string>
+    <string name="Enter_your_name">Введите Ваше имя</string>
 </resources>

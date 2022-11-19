@@ -1,23 +1,15 @@
 package mirea.it.mypets.registrationandlogin;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.FileProvider;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
-import android.graphics.drawable.BitmapDrawable;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
-import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,19 +20,14 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
-import java.io.File;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
+import mirea.it.mypets.MYSQL.MySQL_Login.LoginActivity;
 import mirea.it.mypets.Pet;
 import mirea.it.mypets.R;
 import mirea.it.mypets.mainactivities.GeneralLayout;
@@ -104,7 +91,7 @@ public class helloPage extends AppCompatActivity {
                         public void run() {
                             try {
                                 TimeUnit.SECONDS.sleep(2);
-                                Intent intent2 = new Intent(helloPage.this, MainActivity.class);
+                                Intent intent2 = new Intent(helloPage.this, LoginActivity.class);
                                 startActivity(intent2);
                             } catch (InterruptedException e) {
                                 e.printStackTrace();
@@ -210,7 +197,7 @@ public class helloPage extends AppCompatActivity {
             currentUser.reload();
         }
         if (currentUser == null) {
-            Intent intent = new Intent(helloPage.this, MainActivity.class);
+            Intent intent = new Intent(helloPage.this, LoginActivity.class);
             startActivity(intent);
         }
     }

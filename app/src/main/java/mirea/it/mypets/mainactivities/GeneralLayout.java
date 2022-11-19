@@ -12,7 +12,7 @@ import android.widget.TextView;
 import com.google.firebase.auth.FirebaseAuth;
 
 import mirea.it.mypets.R;
-import mirea.it.mypets.registrationandlogin.MainActivity;
+import mirea.it.mypets.MYSQL.MySQL_Login.LoginActivity;
 
 public class GeneralLayout extends AppCompatActivity {
 
@@ -67,7 +67,7 @@ public class GeneralLayout extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 FirebaseAuth.getInstance().signOut();
-                Intent intent = new Intent(GeneralLayout.this, MainActivity.class);
+                Intent intent = new Intent(GeneralLayout.this, LoginActivity.class);
                 startActivity(intent);
             }
         });

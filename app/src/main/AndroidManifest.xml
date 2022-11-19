@@ -35,10 +35,10 @@
             android:name=".mainactivities.GeneralLayout"
             android:exported="false" />
         <activity
-            android:name=".registrationandlogin.Regustration"
+            android:name=".MYSQL.MySQL_Registration.RegistrationActivity"
             android:exported="false" />
         <activity
-            android:name=".registrationandlogin.MainActivity"
+            android:name=".MYSQL.MySQL_Login.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

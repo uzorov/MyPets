@@ -2,7 +2,6 @@ package mirea.it.mypets.mainactivities;
 
 import static android.app.Activity.RESULT_OK;
 
-import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -32,13 +31,10 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
-import com.squareup.picasso.Picasso;
 
 import java.io.ByteArrayOutputStream;
 
 import mirea.it.mypets.R;
-import mirea.it.mypets.registrationandlogin.Regustration;
-import mirea.it.mypets.registrationandlogin.helloPage;
 import mirea.it.mypets.usefull.PreferenceClass;
 
 /**

@@ -5,18 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import android.os.*;
 import android.view.*;
 import android.util.*;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.FragmentTransaction;
 
 import mirea.it.mypets.R;
-import mirea.it.mypets.registrationandlogin.Regustration;
-import mirea.it.mypets.registrationandlogin.helloPage;
 
 public class photoStorage extends AppCompatActivity {
 

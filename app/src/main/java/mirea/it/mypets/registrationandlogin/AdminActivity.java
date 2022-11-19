@@ -7,8 +7,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EdgeEffect;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -18,8 +16,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import mirea.it.mypets.MYSQL.MySQL_Login.LoginActivity;
 import mirea.it.mypets.R;
-import mirea.it.mypets.mainactivities.GeneralLayout;
 
 public class AdminActivity extends AppCompatActivity implements View.OnClickListener  {
 
@@ -102,7 +100,7 @@ public class AdminActivity extends AppCompatActivity implements View.OnClickList
 
     private void SignOut() {
         FirebaseAuth.getInstance().signOut();
-        Intent intent2 = new Intent(AdminActivity.this, MainActivity.class);
+        Intent intent2 = new Intent(AdminActivity.this, LoginActivity.class);
         startActivity(intent2);
     }
 }
