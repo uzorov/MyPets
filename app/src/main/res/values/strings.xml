@@ -11,4 +11,5 @@
     <string name="enter_the_password">Введите пароль</string>
     <string name="did_you_stil_havent_an_account">У Ваc ещё нет аккаунта?</string>
     <string name="Enter_your_name">Введите Ваше имя</string>
+    <string name="createNewApplication">Создать новую заявку</string>
 </resources>

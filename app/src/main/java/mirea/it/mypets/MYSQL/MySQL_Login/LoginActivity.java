@@ -13,13 +13,14 @@ import android.widget.ImageView;
 import mirea.it.mypets.MYSQL.BackgroundWorkerAssync;
 import mirea.it.mypets.MYSQL.MySQL_Registration.RegistrationActivity;
 import mirea.it.mypets.R;
+import mirea.it.mypets.mainactivities.LoginAdminActivity;
 
 public class LoginActivity extends AppCompatActivity {
 
 
     private EditText mName;
     private EditText mPassword;
-    private ImageView imageView;
+    private ImageView adminAccess;
 
 
 
@@ -27,6 +28,15 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        adminAccess = findViewById(R.id.imageViewAdministrator);
+        adminAccess.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, LoginAdminActivity.class);
+                startActivity(intent);
+            }
+        });
 
         mName = (EditText) findViewById(R.id.ClientName);
         mPassword = (EditText) findViewById(R.id.Password);
@@ -41,7 +51,7 @@ public class LoginActivity extends AppCompatActivity {
         findViewById(R.id.signInButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                BackgroundWorkerAssync backgroundWorkerAssync = new BackgroundWorkerAssync(getApplicationContext());
+                BackgroundWorkerAssync backgroundWorkerAssync = new BackgroundWorkerAssync(LoginActivity.this);
                 backgroundWorkerAssync.execute(LOG_IN_CODE, mName.getText().toString(), mPassword.getText().toString());
             }
         }); //Вход

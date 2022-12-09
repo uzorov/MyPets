@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".registrationandlogin.helloPage">
+    tools:context=".MYSQL.MYSQL_GettingData.LoadingScreenActivity">
 
 
     <View

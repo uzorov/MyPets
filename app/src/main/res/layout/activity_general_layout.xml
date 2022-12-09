@@ -4,19 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".mainactivities.GeneralLayout">
+    tools:context=".mainactivities.MainActivity">
+
 
     <View
         android:id="@+id/view2"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_marginEnd="15dp"
         android:background="@drawable/rectangle"
         app:layout_constraintBottom_toBottomOf="@+id/textView3"
-        app:layout_constraintEnd_toStartOf="@+id/galleryText"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintEnd_toStartOf="@+id/application_link_text_general_activity"
 
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.495" />
 
     <TextView
         android:id="@+id/textView3"
@@ -32,18 +32,18 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <TextView
-        android:id="@+id/galleryText"
+        android:id="@+id/application_link_text_general_activity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
-        android:layout_marginEnd="174dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="28dp"
         android:fontFamily="@font/boncegro_font"
-        android:text="Галерея"
+        android:text="Заявки"
         android:textColor="@color/general_blue"
+
         android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/view2"
-        app:layout_constraintTop_toTopOf="@+id/gallery" />
+        app:layout_constraintTop_toTopOf="@+id/application_link_button_general_activity" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -98,10 +98,10 @@
 
     <ImageButton
         android:id="@+id/advices"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="91dp"
+        android:layout_height="86dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="32dp"
         android:background="@null"
         android:contentDescription="@string/app_name"
         app:layout_constraintStart_toStartOf="parent"
@@ -109,15 +109,15 @@
         app:srcCompat="@drawable/pettipsbutton" />
 
     <ImageButton
-        android:id="@+id/gallery"
+        android:id="@+id/application_link_button_general_activity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="26dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
         android:background="@null"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/advices"
-        app:srcCompat="@drawable/photographer" />
+        app:srcCompat="@drawable/contract" />
 
     <TextView
         android:id="@+id/signOut"

@@ -10,7 +10,6 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
@@ -18,9 +17,10 @@ import com.squareup.picasso.Picasso
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
+import mirea.it.mypets.MYSQL.MYSQL_ENTITYS.Application
 import mirea.it.mypets.R
 
-class advicesPage : AppCompatActivity() {
+class NewsAboutPetsActivity : AppCompatActivity() {
 
     var request: Disposable? = null
     lateinit var vRecycleView: RecyclerView
@@ -43,6 +43,8 @@ class advicesPage : AppCompatActivity() {
         }, {
             Log.e("test", "error", it)
         })
+
+
     }
 
     fun showRecView(feedList: ArrayList<FeedItems>) {
@@ -50,11 +52,11 @@ class advicesPage : AppCompatActivity() {
         vRecycleView.layoutManager = LinearLayoutManager(this)
     }
 
-    class RecAdapter(val items: ArrayList<FeedItems>) : RecyclerView.Adapter<RecHolder>() {
+    private class RecAdapter(val items: ArrayList<FeedItems>) : RecyclerView.Adapter<RecHolder>() {
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecHolder {
 
             val inflater = LayoutInflater.from(parent!!.context)
-            val view = inflater.inflate(R.layout.list_item, parent, false)
+            val view = inflater.inflate(R.layout.list_item_for_news_activity, parent, false)
             return RecHolder(view)
         }
 
@@ -94,7 +96,7 @@ class advicesPage : AppCompatActivity() {
 
             itemView.setOnClickListener() {
                 val i = Intent(Intent.ACTION_VIEW)
-                i.data= Uri.parse(item.link)
+                i.data = Uri.parse(item.link)
                 vThumb.context.startActivity(i)
             }
         }

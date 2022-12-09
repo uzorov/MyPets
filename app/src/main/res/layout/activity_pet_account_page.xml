@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".mainactivities.petAccountPage">
+    tools:context=".mainactivities.ClientAccountPage">
 
     <View
         android:id="@+id/view2"
@@ -31,7 +31,7 @@
             tools:srcCompat="@tools:sample/avatars" />
 
         <TextView
-            android:id="@+id/petSetAccountPageName"
+            android:id="@+id/ClientsName_ProfilePage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
@@ -44,26 +44,26 @@
             android:textSize="25sp" />
 
         <TextView
-            android:id="@+id/petSetAccountPageType"
+            android:id="@+id/ClientsPhoneNumber_ProfilePage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:fontFamily="@font/laptev_font"
             android:gravity="center_horizontal"
-            android:text="Тип"
+            android:text="Номер телефона"
             android:textColor="@color/general_blue"
             android:textSize="25sp" />
 
         <TextView
-            android:id="@+id/petSetAccountPageNumberOdCloudPhotos"
+            android:id="@+id/ClientsMail_ProfilePage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:fontFamily="@font/laptev_font"
             android:gravity="center_horizontal"
-            android:text="Количество фотографий в базе"
+            android:text="Почта"
             android:textColor="@color/general_blue"
             android:textSize="25sp" />
 

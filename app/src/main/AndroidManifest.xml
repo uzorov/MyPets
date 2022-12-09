@@ -2,37 +2,41 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="mirea.it.mypets">
 
-    <uses-feature
-        android:name="android.hardware.camera"
-        android:required="true" />
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
+
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MyPets">
+        android:theme="@style/Theme.MyPets"
+        android:usesCleartextTraffic="true">
         <activity
-            android:name=".registrationandlogin.AdminActivity"
+            android:name=".mainactivities.LoginAdminActivity"
             android:exported="false" />
         <activity
-            android:name=".mainactivities.advicesPage"
+            android:name=".mainactivities.AdminActivity"
             android:exported="false" />
         <activity
-            android:name=".mainactivities.petAccountPage"
+            android:name=".mainactivities.NewsAboutPetsActivity"
             android:exported="false" />
         <activity
-            android:name=".mainactivities.photoStorage"
+            android:name=".mainactivities.ClientAccountPage"
             android:exported="false" />
         <activity
-            android:name=".registrationandlogin.helloPage"
+            android:name=".mainactivities.ApplicationActivity"
+            android:launchMode="singleInstance"
             android:exported="false" />
         <activity
-            android:name=".mainactivities.GeneralLayout"
+            android:name=".MYSQL.MYSQL_GettingData.LoadingScreenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".mainactivities.MainActivity"
             android:exported="false" />
         <activity
             android:name=".MYSQL.MySQL_Registration.RegistrationActivity"
